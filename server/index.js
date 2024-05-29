@@ -137,7 +137,7 @@ app.post("/pageSoal", async (req, res) => {
 });
 
 
-app.listen(port, () => {
-  console.log(`Server sedang berjalan di http://localhost:${port}`);
+// app.listen(port, () => {
+//   console.log(`Server sedang berjalan di http://localhost:${port}`);
 
-});
+// });
