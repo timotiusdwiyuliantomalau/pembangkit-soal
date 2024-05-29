@@ -6,7 +6,7 @@ const [inputSoal,setInputSoal]=useState('');
   const [hasilSoal,setHasilSoal]=useState([]);
   const [jumlahSoal,setJumlahSoal]=useState([]);
   const [nomor,setNomor]=useState(0);
-
+axios.defaults.withCredentials=true;
   async function handleDataSoal(e){
   document.body.style.cursor='wait';
   setTimeout(()=>{
