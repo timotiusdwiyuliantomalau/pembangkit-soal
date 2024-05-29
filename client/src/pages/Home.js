@@ -7,14 +7,13 @@ const [inputSoal,setInputSoal]=useState('');
   const [jumlahSoal,setJumlahSoal]=useState([]);
   const [nomor,setNomor]=useState(0);
   axios.defaults.withCredentials=true;
-
   async function handleDataSoal(e){
   document.body.style.cursor='wait';
   setTimeout(()=>{
     document.body.style.cursor='default';
   },[2000])
   setNomor(e.target.parentNode.nextElementSibling.value);
-  const res=await axios.post("http://localhost:3001",{nomor:e.target.parentNode.nextElementSibling.value,inputSoal,jumlahSoal});
+  const res=await axios.post("https://database-pembangkit-soal.vercel.app",{nomor:e.target.parentNode.nextElementSibling.value,inputSoal,jumlahSoal});
   setHasilSoal(res.data.soal);
 }
 
@@ -35,7 +34,7 @@ const hoverTooltip=(e)=>{
   for(let i=1;i<11;i++){
       arrSoal.push(
       <div key={i} className="soalContainer flex flex-col mb-4">
-      <label className="text-l font-serif font-semibold tracking-wider uppercase text-[#2B2E4A]" htmlFor={'soal'+i}>Tujuan P {i}</label>
+      <label className="text-l font-serif font-semibold tracking-wider uppercase text-[#2B2E4A]" htmlFor={'soal'+i}>Tujuan Pembelajaran {i}</label>
       <div className="flex gap-3 relative">
       <input  onChange={(e)=>{setInputSoal(e.target.value)}} id={'soal'+i} className="w-[30rem] bg-[#FBFADA] border-[1px] border-gray-400 rounded-md pl-2 text-wrap" type="text"/>
       {/* <input  onChange={(e)=>{setJumlahSoal(e.target.value)}} id={'soal'+i} className="w-[30rem] bg-[#FBFADA] border-[1px] border-gray-400 rounded-md pl-2 text-wrap" type="text"/> */}

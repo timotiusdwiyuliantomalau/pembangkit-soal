@@ -16,7 +16,6 @@ app.use(cors({
   origin:["https://pembangkit-soal-apps.vercel.app"],
   methods:["POST","GET"],
   credentials:true,
-  allowedHeaders: ['Content-Type'],
 }));
 
 const port = 3001;
