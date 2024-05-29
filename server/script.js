@@ -20,6 +20,12 @@ const port = 3001;
 let nomorArr = [];
 
 connect();
+chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+    // Handle the message and call sendResponse if necessary
+    sendResponse({ status: "success" });
+    return true; // Indicate you want to send a response asynchronously
+});
+
 app.get("/",(req,res)=>{
   res.json("Server sedang berjalan...");
 })
