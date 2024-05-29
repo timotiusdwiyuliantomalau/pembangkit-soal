@@ -16,7 +16,7 @@ const app = express();
 //   allowedHeaders: ['Content-Type'],
 // }));
 
-const port = 3001;
+// const port = 3001;
 // let nomorArr = [];
 
 // connect();
@@ -134,7 +134,7 @@ app.get("/",(req,res)=>{
 // });
 
 
-app.listen(port, () => {
-  console.log(`Server sedang berjalan di http://localhost:${port}`);
+// app.listen(port, () => {
+//   console.log(`Server sedang berjalan di http://localhost:${port}`);
 
-});
+// });
