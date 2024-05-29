@@ -20,6 +20,9 @@ const port = 3001;
 let nomorArr = [];
 
 connect();
+app.get("/",(req,res)=>{
+  res.json("Server sedang berjalan...");
+})
 app.post("/", (req, res) => {
   hasilSoal(req.body.inputSoal,req.body.jumlahSoal, async (result) => {
     let arrSoal = [];
