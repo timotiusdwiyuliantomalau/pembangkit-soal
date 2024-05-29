@@ -1,9 +1,6 @@
 import mongoose from "mongoose";
 const connect = () => {
-  mongoose.connect("mongodb://localhost/test", {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  });
+  mongoose.connect("mongodb+srv://pembangkit-soal:<password>@cluster0.8i5kff4.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0");
   
 
 
