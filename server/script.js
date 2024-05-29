@@ -21,19 +21,6 @@ let nomorArr = [];
 
 connect();
 
-chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
-    // Handle the message and call sendResponse if necessary
-    sendResponse({ status: "success" });
-    return true; // Indicate you want to send a response asynchronously
-});
-chrome.runtime.sendMessage({ action: "doSomething" }, (response) => {
-    if (chrome.runtime.lastError) {
-        console.error("Runtime error:", chrome.runtime.lastError);
-    } else {
-        console.log("Response received:", response);
-    }
-});
-
 app.get("/",(req,res)=>{
   res.json("Server sedang berjalan...");
 })
