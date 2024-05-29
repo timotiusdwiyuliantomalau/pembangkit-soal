@@ -13,6 +13,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static(path.join('script.js', 'react_js/build')));
 app.use(cors({
+  origin:["https://pembangkit-soal-apps.vercel.app/"],
+  methods:["POST","GET"],
+  credentials:true,
   allowedHeaders: ['Content-Type'],
 }));
 
