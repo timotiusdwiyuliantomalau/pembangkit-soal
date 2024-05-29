@@ -13,7 +13,7 @@ const [inputSoal,setInputSoal]=useState('');
     document.body.style.cursor='default';
   },[2000])
   setNomor(e.target.parentNode.nextElementSibling.value);
-  const res=await axios.post("https://database-pembangkit-soal.vercel.app",{nomor:e.target.parentNode.nextElementSibling.value,inputSoal,jumlahSoal});
+  const res=await axios.post("http://localhost:3001",{nomor:e.target.parentNode.nextElementSibling.value,inputSoal,jumlahSoal});
   setHasilSoal(res.data.soal);
 }
 
